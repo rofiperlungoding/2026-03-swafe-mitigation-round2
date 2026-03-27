@@ -1,43 +1,26 @@
-# [Sponsorname] Mitigation Review
-- Total Prize Pool: XXX XXX
-  - Warden awards: XXX XXX
-  - Judge awards: XXX XXX
-- [Warden guidelines for C4 mitigation reviews](https://code4rena.notion.site/Guidelines-for-C4-mitigation-reviews-ed10fc5cfbf640bd8dcec66f38b343c4)
-- Starts TBD XXX XXX XX 20:00 UTC (ex. `Starts March 22, 2023 20:00 UTC`)
-- Ends TBD XXX XXX XX 20:00 UTC (ex. `Ends March 30, 2023 20:00 UTC`)
+# Swafe Mitigation Review, Round 2
+
+Prize pools are outlined [in the Round 1 mitigation review repo](https://github.com/code-423n4/2026-03-swafe-mitigation). Wardens must participate in all rounds to be eligible for awards. 
+
+Refer to the [Warden guidelines for C4 mitigation reviews](https://code4rena.notion.site/Guidelines-for-C4-mitigation-reviews-ed10fc5cfbf640bd8dcec66f38b343c4) for details on multi-round mitigation reviews. 
+
+- Starts March 30, 2026 20:00 UTC 
+- Ends April 1, 2026 20:00 UTC
 
 ## Important note 
 
 Each warden must submit a mitigation review for *every* individual item listed in the `Scope` section below. **Incomplete or insufficient mitigation reviews will not be eligible for awards.**
 
-## Overview of changes [optional]
-
-[ ⭐️ SPONSORS ADD INFO HERE ]
-Please provide context about the mitigations that were applied if applicable and identify any areas of specific concern. 
-
 ## Scope
 
-### Latest Commit
-[🔴 EM: If available, add a link to the sponsor's latest fixed commit.]
+### Mitigation of Low Severity Issues
 
-### Mitigation of High & Medium Severity Issues
-
-Mitigations of all High and Medium issues listed here will be considered in-scope:
+Mitigations of Low Severity issues listed here will be considered in-scope:
 
 | Fix | Mitigation of | Notes | 
-| ----------- | ------------- | ----------- |
-| [Commit XXX](https://github.com/your-repo/sample-contracts/pull/XXX) | [S-X: Title](link to primary submission of findings groiup) | This mitigation does XYZ | 
-
-### Additional scope to be reviewed
-[🔴 EM: Remove this section if the sponsor is only mitigating HMs. Add all relevant PRs/commits to the table below. This can include lows, QA reports, and fixes not included in the C4 audit.  If the fix does not map to a submission number from the C4 audit, please use the `ADD-01` as the naming convention.]
-
-These are additional changes that will be in scope.
-
-| Fix | Mitigation of | Notes | 
-| ----------- | ------------- | ----------- |
-| [Commit XXX](https://github.com/your-repo/sample-contracts/pull/XXX) | ADD-01 | This mitigation does XYZ | 
+| [swafe-lib PR 151](https://github.com/swafe-io/swafe-lib/pull/151) | [S-210: Invalid guardian shares bypass threshold after voting, causing panic or wrong recovery key during reconstruction ](https://code4rena.com/audits/2025-11-swafe/submissions/S-210) |      | 
+| [Commit `b273100`](https://github.com/swafe-io/swafe-lib/pull/157/changes/b2731006aa5f4a8fe6eb86b12e175db0ee0690bd) | [S-867: Secrets Not Zeroized on Drop - Memory Disclosure Risk](https://code4rena.com/audits/2025-11-swafe/submissions/S-867) |   | 
+| [Commit `f030a11`](https://github.com/swafe-io/swafe-lib/pull/156/changes/f030a1178be35b5cd9b5b1ca04926fff1045fe4d) | [S-475: Critical API-Sanity Violation: Shamir Share Generation Allows t > n, Producing Unrecoverable Secrets](https://code4rena.com/audits/2025-11-swafe/submissions/S-475) |    
 
 ## Out of Scope
-[🔴 EM: Please list any High and Medium issues that were judged as valid but the sponsor has chosen not to fix in a bulleted list.]
-
-- [S-1: Title](link to primary submission of findings group)
+All other issues arising from the Swafe audit and/or the preceding mitigation review.
